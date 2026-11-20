@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - [Your App Name]</title>
+    <meta name="description" content="Privacy Policy for [Your App Name] in strict compliance with Google Play Developer Program Policies and GDPR.">
+
+    <!-- Fonts: Inter for ultra-clean tech agency typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #4852FC;
+            --primary-hover: #353fd9;
+            --primary-light: #eff1ff;
+            --slate-900: #0f172a;
+            --slate-800: #1e293b;
+            --slate-700: #334155;
+            --slate-600: #475569;
+            --slate-500: #64748b;
+            --slate-400: #94a3b8;
+            --slate-200: #e2e8f0;
+            --slate-100: #f1f5f9;
+            --slate-50: #f8fafc;
+            --blue-50: #eff6ff;
+            --blue-500: #3b82f6;
+            --emerald-500: #10b981;
+            --emerald-50: #ecfdf5;
+            --red-500: #ef4444;
+            --red-50: #fef2f2;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--slate-50);
+            background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+            background-size: 24px 24px;
+            color: var(--slate-700);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+            color: var(--slate-900);
+            letter-spacing: -0.02em;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+        }
+
+        /* Top Navigation Header */
+        header.nav-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(248, 250, 252, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+            width: 100%;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 800;
+            font-size: 1.35rem;
+            color: var(--slate-900);
+            letter-spacing: -0.03em;
+        }
+
+        .brand-logo .dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--slate-600);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-header-cta {
+            background-color: var(--slate-900);
+            color: #ffffff !important;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.5rem 1.1rem;
+            border-radius: 9999px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-header-cta:hover {
+            background-color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        /* Layout Container */
+        .page-wrapper {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 6rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .content-grid {
+                grid-template-columns: 280px 1fr;
+                gap: 4rem;
+            }
+        }
+
+        /* Sticky Left Sidebar (Table of Contents) */
+        aside.sidebar {
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            aside.sidebar {
+                display: block;
+            }
+        }
+
+        .sticky-toc {
+            position: sticky;
+            top: 6rem;
+            max-height: calc(100vh - 8rem);
+            overflow-y: auto;
+            padding-right: 1rem;
+        }
+
+        .toc-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .toc-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            border-left: 2px solid var(--slate-200);
+            padding-left: 0.75rem;
+        }
+
+        .toc-link {
+            font-size: 0.85rem;
+            color: var(--slate-600);
+            padding: 0.25rem 0;
+            line-height: 1.4;
+            display: block;
+            transition: all 0.15s ease;
+        }
+
+        .toc-link:hover, .toc-link.active {
+            color: var(--primary);
+            font-weight: 600;
+            transform: translateX(3px);
+        }
+
+        /* Main Content Column */
+        main.main-content {
+            min-width: 0;
+        }
+
+        /* Hero / Document Header */
+        .doc-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            margin-bottom: 1.25rem;
+            border: 1px solid rgba(72, 82, 252, 0.2);
+        }
+
+        h1.doc-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--slate-900);
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            h1.doc-title {
+                font-size: 3.25rem;
+            }
+        }
+
+        .doc-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            font-size: 0.9rem;
+            color: var(--slate-500);
+            border-bottom: 1px solid var(--slate-200);
+            padding-bottom: 1.5rem;
+        }
+
+        .doc-meta strong {
+            color: var(--slate-800);
+        }
+
+        /* Clixade-style "Key Points" Takeaways Box */
+        .key-points-box {
+            background-color: #ffffff;
+            border: 1px solid #bfdbfe;
+            border-left: 5px solid var(--primary);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.08);
+        }
+
+        .key-points-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .key-points-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--slate-900);
+        }
+
+        .key-points-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .key-points-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .key-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            background: var(--blue-50);
+            padding: 1rem 1.2rem;
+            border-radius: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--slate-800);
+        }
+
+        .key-item svg {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+            margin-top: 2px;
+        }
+
+        /* Policy Sections */
+        .policy-section {
+            margin-top: 3.5rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .section-heading {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--slate-900);
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--slate-200);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .policy-section h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.5rem;
+            color: var(--slate-800);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+            color: var(--slate-600);
+            line-height: 1.75;
+        }
+
+        ul, ol {
+            margin: 0.75rem 0 1.25rem 1.75rem;
+            color: var(--slate-600);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* Modern Data Table */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 0.75rem;
+            border: 1px solid var(--slate-200);
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--slate-100);
+            color: var(--slate-900);
+            font-weight: 700;
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--slate-200);
+        }
+
+        td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid var(--slate-100);
+            color: var(--slate-700);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Callout cards */
+        .callout-box {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 0.85rem;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .callout-box.alert-red {
+            border-left: 4px solid var(--red-500);
+            background-color: #fffaf9;
+        }
+
+        .callout-box.highlight-indigo {
+            border-left: 4px solid var(--primary);
+            background-color: #fbfbff;
+        }
+
+        /* Partner/Provider Grid */
+        .provider-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        @media (min-width: 640px) {
+            .provider-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .provider-card {
+            background: #ffffff;
+            border: 1px solid var(--slate-200);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .provider-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 6px 12px -2px rgba(72, 82, 252, 0.08);
+        }
+
+        .provider-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.35rem;
+            color: var(--slate-900);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .provider-card p {
+            font-size: 0.85rem;
+            color: var(--slate-500);
+            margin-bottom: 0.75rem;
+        }
+
+        .provider-card a {
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* Buttons */
+        .btn-danger {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: var(--red-500);
+            color: #ffffff !important;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.75rem 1.4rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 10px rgba(239, 68, 68, 0.25);
+            transition: all 0.2s ease;
+            margin-top: 0.5rem;
+        }
+
+        .btn-danger:hover {
+            background-color: #dc2626;
+            transform: translateY(-1px);
+        }
+
+        /* Footer Architecture (Clixade Exact Design) */
+        footer.site-footer {
+            border-top: 1px solid var(--slate-200);
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            padding-top: 4.5rem;
+            padding-bottom: 3rem;
+            margin-top: 6rem;
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 4fr 5fr 3fr;
+                gap: 3rem;
+            }
+        }
+
+        .footer-brand p {
+            font-size: 0.9rem;
+            color: var(--slate-500);
+            margin: 1rem 0 1.5rem;
+            max-width: 320px;
+        }
+
+        .footer-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--slate-600);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 1.25rem;
+        }
+
+        .offices-subgrid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .offices-subgrid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .office-item h5 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--slate-800);
+            margin-bottom: 0.35rem;
+        }
+
+        .office-item p {
+            font-size: 0.85rem;
+            color: var(--slate-500);
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
+
+        .footer-links-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .footer-links-list a {
+            color: var(--slate-600);
+            font-size: 0.9rem;
+        }
+
+        .footer-links-list a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid var(--slate-100);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: var(--slate-400);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (min-width: 768px) {
+            .footer-bottom {
+                flex-direction: row;
+            }
+        }
+
+        .footer-bottom-nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-bottom-nav a {
+            color: var(--slate-500);
+        }
+
+        .footer-bottom-nav a:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Modern Navigation Header -->
+    <header class="nav-header">
+        <div class="nav-container">
+            <a href="#" class="brand-logo">
+                <span class="dot"></span>
+                <span>[Your Brand Name]</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#key-points">Overview</a></li>
+                <li><a href="#account-deletion">Account Deletion</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="mailto:[privacy-contact@yourdomain.com]" class="btn-header-cta">Support</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <div class="content-grid">
+
+            <!-- Left Sticky Sidebar: Table of Contents -->
+            <aside class="sidebar">
+                <div class="sticky-toc">
+                    <div class="toc-title">Table of Contents</div>
+                    <nav class="toc-nav">
+                        <a href="#introduction" class="toc-link">1. Introduction & Entity</a>
+                        <a href="#key-points" class="toc-link">2. Key Points Summary</a>
+                        <a href="#information-we-collect" class="toc-link">3. Information We Collect</a>
+                        <a href="#device-identifiers" class="toc-link">4. Device Identifiers & App Set ID</a>
+                        <a href="#how-we-use" class="toc-link">5. How We Use Information</a>
+                        <a href="#prominent-disclosure" class="toc-link">6. Prominent In-App Disclosure</a>
+                        <a href="#third-party-services" class="toc-link">7. Third-Party Code & AI SDKs</a>
+                        <a href="#data-security" class="toc-link">8. Data Security & Encryption</a>
+                        <a href="#account-deletion" class="toc-link">9. Account & Data Deletion</a>
+                        <a href="#childrens-privacy" class="toc-link">10. Children's Privacy (Families)</a>
+                        <a href="#user-rights-gdpr" class="toc-link">11. Your Rights (GDPR / UK)</a>
+                        <a href="#contact" class="toc-link">12. Contact & Privacy Officer</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+
+                <!-- Document Header -->
+                <div class="doc-header">
+                    <div class="badge-pill">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        Google Play Developer Policy Compliant
+                    </div>
+                    <h1 class="doc-title">Privacy Policy</h1>
+                    <p style="font-size: 1.15rem; color: var(--slate-600); margin-bottom: 1.25rem;">
+                        How <strong>[Your App Name]</strong> protects, collects, manages, and respects your personal and device data.
+                    </p>
+                    <div class="doc-meta">
+                        <span><strong>Entity:</strong> [Your Company / Developer Name]</span>
+                        <span><strong>Effective Date:</strong> [Date, e.g., November 20, 2026]</span>
+                        <span><strong>Last Updated:</strong> [Date, e.g., November 20, 2026]</span>
+                    </div>
+                </div>
+
+                <!-- Clixade-Style "Key Points" Takeaways Box -->
+                <div class="key-points-box" id="key-points">
+                    <div class="key-points-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2.5">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <h3>Key Takeaways & Summary</h3>
+                    </div>
+                    <p>
+                        We believe in complete transparency. Here is a quick snapshot of our core data principles:
+                    </p>
+                    <div class="key-points-grid">
+                        <div class="key-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <div><strong>Zero Sale of Data:</strong> We never sell your personal or sensitive data to any third party for money.</div>
+                        </div>
+                        <div class="key-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <div><strong>No Persistent ID Tracking:</strong> We never link hardware IMEI or SIM numbers to your identity or advertising IDs.</div>
+                        </div>
+                        <div class="key-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <div><strong>Permanent Deletion:</strong> You can delete your account and all records anytime in-app or via our web form.</div>
+                        </div>
+                        <div class="key-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            <div><strong>Encrypted in Transit:</strong> All communications between the app and server are protected by HTTPS / TLS 1.3.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 1 -->
+                <section class="policy-section" id="introduction">
+                    <h2 class="section-heading">1. Introduction & Entity Information</h2>
+                    <p>
+                        This Privacy Policy is provided by <strong>[Your Company / Developer Name]</strong> ("we", "us", "our"), the official developer and publisher of <strong>[Your App Name]</strong> (the "App"). We are firmly dedicated to safeguarding user privacy and complying fully with the Google Play Developer Program Policies (including the <em>User Data Policy</em> and <em>Personal and Sensitive User Data</em> guidelines), as well as global standards like the EU/UK GDPR and California consumer regulations.
+                    </p>
+                    <p>
+                        This policy outlines our procedures regarding the collection, handling, storage, and sharing of information gathered from you or your mobile device.
+                    </p>
+                </section>
+
+                <!-- Section 2 -->
+                <section class="policy-section" id="information-we-collect">
+                    <h2 class="section-heading">2. Information We Collect</h2>
+                    <p>
+                        We limit data collection exclusively to what is strictly necessary to deliver the features of <strong>[Your App Name]</strong>:
+                    </p>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Data Category</th>
+                                    <th>Specific Data Fields</th>
+                                    <th>Purpose</th>
+                                    <th>Shared with Third Parties?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Account Information</strong></td>
+                                    <td>Name, Email address, Username</td>
+                                    <td>Authentication, user profile, account security</td>
+                                    <td>No (stored securely on our servers)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Device Information</strong></td>
+                                    <td>OS version, model, App Set ID, IP address</td>
+                                    <td>App diagnostics, crash resolution, fraud prevention</td>
+                                    <td>Google Firebase Diagnostics</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Location Data</strong> (if used)</td>
+                                    <td>Approximate (coarse) or precise GPS</td>
+                                    <td>Location-based app utility</td>
+                                    <td>Only upon runtime permission grant</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>App Activity & Crashes</strong></td>
+                                    <td>Crash traces, interaction logs, load times</td>
+                                    <td>Performance enhancements, fixing bugs</td>
+                                    <td>Firebase Crashlytics</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Section 3 -->
+                <section class="policy-section" id="device-identifiers">
+                    <h2 class="section-heading">3. Device Identifiers & App Set ID Compliance</h2>
+                    <p>
+                        In strict compliance with Google Play Store User Data rules:
+                    </p>
+                    <div class="callout-box highlight-indigo">
+                        <ul style="margin: 0; padding-left: 1.25rem;">
+                            <li><strong>No Persistent Identifier Linking:</strong> Our App does <strong>not</strong> access or link persistent device identifiers (such as IMEI, IMSI, MAC address, or SIM Serial Number) to personal user data or resettable identifiers (such as the Android Advertising ID / AAID).</li>
+                            <li><strong>App Set ID Policy:</strong> Any App Set ID collected is used exclusively for internal diagnostics, aggregated analytics, and fraud mitigation. It is <strong>never</strong> linked to advertising identifiers or used for personalized ads.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section class="policy-section" id="how-we-use">
+                    <h2 class="section-heading">4. How We Use Information</h2>
+                    <p>
+                        We process user information strictly for the policy-compliant purposes disclosed to you:
+                    </p>
+                    <ul>
+                        <li>To provide, personalize, and improve <strong>[Your App Name]</strong> features.</li>
+                        <li>To authenticate user sessions and secure accounts against fraud and unauthorized access.</li>
+                        <li>To analyze crash logs, diagnose technical anomalies, and deliver performance upgrades.</li>
+                        <li>To facilitate customer support and respond directly to your technical inquiries.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 5 -->
+                <section class="policy-section" id="prominent-disclosure">
+                    <h2 class="section-heading">5. Prominent In-App Disclosure & User Consent</h2>
+                    <p>
+                        Whenever our App requires access to sensitive device capabilities (such as Location, Camera, Audio, or Storage):
+                    </p>
+                    <div class="callout-box">
+                        <p style="margin-bottom: 0.5rem; font-weight: 600; color: var(--slate-900);">Google Play Prominent Disclosure Standard:</p>
+                        <p>
+                            Prior to requesting any system runtime permission dialog, the App presents an unambiguous in-app prompt in the normal flow of the application. This prompt explicitly details what data is accessed, how it will be processed, and requires an affirmative action (such as tapping "Agree" or "Allow"). Navigating away or pressing the back button is never treated as consent.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 6 -->
+                <section class="policy-section" id="third-party-services">
+                    <h2 class="section-heading">6. Third-Party Code, SDKs & AI Providers</h2>
+                    <p>
+                        All third-party SDKs and service providers incorporated into our App are vetted to ensure they adhere to Google Play Developer policies. They are strictly prohibited from selling your data or using it for independent purposes:
+                    </p>
+
+                    <div class="provider-grid">
+                        <div class="provider-card">
+                            <h4>Google Play Services</h4>
+                            <p>Used for fundamental device APIs, Google authentication, and security validation.</p>
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy &rarr;</a>
+                        </div>
+                        <div class="provider-card">
+                            <h4>Firebase Crashlytics</h4>
+                            <p>Monitors application stability, crash traces, and performance bottlenecks.</p>
+                            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy &rarr;</a>
+                        </div>
+                        <div class="provider-card">
+                            <h4>Google AdMob (If Enabled)</h4>
+                            <p>Delivers policy-compliant in-app ads respecting user advertising preferences.</p>
+                            <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Privacy Policy &rarr;</a>
+                        </div>
+                        <div class="provider-card">
+                            <h4>AI Services (If Integrated)</h4>
+                            <p>Processes user-initiated text/media requests without training third-party public models.</p>
+                            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google AI Terms &rarr;</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 7 -->
+                <section class="policy-section" id="data-security">
+                    <h2 class="section-heading">7. Data Security & Encryption Practices</h2>
+                    <p>
+                        We enforce robust technical safeguards to ensure that personal and sensitive data is handled securely:
+                    </p>
+                    <ul>
+                        <li><strong>Modern Cryptography:</strong> All data transmitted between the App and our backend infrastructure is encrypted using modern protocols (<strong>HTTPS / TLS 1.3</strong>).</li>
+                        <li><strong>Data at Rest:</strong> Sensitive databases are encrypted using AES-256 with restricted, audited access credentials.</li>
+                        <li><strong>Continuous Monitoring:</strong> We conduct regular security checks to prevent unauthorized access or data exposure.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 8: Account Deletion (Google Play Strict Requirement) -->
+                <section class="policy-section" id="account-deletion">
+                    <h2 class="section-heading" style="color: var(--red-500);">
+                        <span>8. User Account & Data Deletion</span>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                    </h2>
+                    <p>
+                        In accordance with Google Play's <strong>Account Deletion Requirement</strong>, users have full autonomy to delete their accounts and permanently erase all associated personal data at any time. We permanently delete your data rather than simply deactivating or freezing your account.
+                    </p>
+
+                    <div class="callout-box alert-red">
+                        <h4 style="color: var(--slate-900); margin-bottom: 0.5rem; font-size: 1rem;">Option A: In-App Account Deletion</h4>
+                        <ol style="margin-bottom: 1rem;">
+                            <li>Open <strong>[Your App Name]</strong> on your Android device.</li>
+                            <li>Navigate to <strong>Settings</strong> &gt; <strong>Account</strong>.</li>
+                            <li>Select <strong>Delete Account & Data</strong> and confirm.</li>
+                        </ol>
+
+                        <h4 style="color: var(--slate-900); margin-bottom: 0.5rem; font-size: 1rem;">Option B: External Web Deletion Request (Play Console Web Link)</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 0.75rem;">
+                            If you uninstalled the application or wish to delete your records online, submit a request directly to our privacy desk:
+                        </p>
+                        <a href="mailto:[privacy-contact@yourdomain.com]?subject=Permanent%20Account%20and%20Data%20Deletion%20Request" class="btn-danger">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                            Request Permanent Account Deletion
+                        </a>
+                        <p style="font-size: 0.8rem; color: var(--slate-500); margin-top: 0.75rem;">
+                            *All associated personal records will be completely expunged within 30 days of verification, in accordance with applicable legal retention requirements.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Section 9 -->
+                <section class="policy-section" id="childrens-privacy">
+                    <h2 class="section-heading">9. Children's Privacy (Google Play Families Policy)</h2>
+                    <p>
+                        <strong>[Your App Name]</strong> respects child safety and complies strictly with the <em>Children's Online Privacy Protection Act (COPPA)</em> and the <em>Google Play Families Policy</em>:
+                    </p>
+                    <ul>
+                        <li>Our application is not directed to children under 13 (or under 16 in the European Economic Area).</li>
+                        <li>We do not knowingly solicit or collect personal information from children.</li>
+                        <li>If we discover that personal data has been inadvertently collected from a child without verified parental consent, we will delete that data immediately.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 10 -->
+                <section class="policy-section" id="user-rights-gdpr">
+                    <h2 class="section-heading">10. Your Rights (GDPR, UK & Swiss Frameworks)</h2>
+                    <p>
+                        Under applicable data protection frameworks (such as GDPR), you maintain the following rights:
+                    </p>
+                    <ul>
+                        <li><strong>Right to Access:</strong> Request a copy of the personal data we store about you.</li>
+                        <li><strong>Right to Rectification:</strong> Request correction of any incomplete or inaccurate data.</li>
+                        <li><strong>Right to Erasure ("Right to Be Forgotten"):</strong> Request permanent deletion of your data as detailed in Section 8.</li>
+                        <li><strong>Right to Withdraw Consent:</strong> Revoke previously granted permissions anytime via your device settings.</li>
+                    </ul>
+                </section>
+
+                <!-- Section 11 -->
+                <section class="policy-section" id="contact">
+                    <h2 class="section-heading">11. Contact Us & Privacy Officer</h2>
+                    <p>
+                        If you have questions, inquiries, or complaints concerning this Privacy Policy, please reach out to our dedicated privacy contact:
+                    </p>
+                    <div class="callout-box">
+                        <ul style="list-style: none; margin: 0; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;"><strong>Entity / Developer:</strong> [Your Company / Developer Name]</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Privacy Desk Email:</strong> <a href="mailto:[privacy-contact@yourdomain.com]">[privacy-contact@yourdomain.com]</a></li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Official Website:</strong> <a href="https://[yourwebsite.com]" target="_blank" rel="noopener">https://[yourwebsite.com]</a></li>
+                            <li><strong>Office Address:</strong> [Your Business Physical Address, City, Country]</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Clixade Exact Footer Design Architecture -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+
+                <!-- Column 1: Brand & Tagline -->
+                <div class="footer-brand">
+                    <a href="#" class="brand-logo" style="margin-bottom: 0.75rem;">
+                        <span class="dot"></span>
+                        <span>[Your Brand Name]</span>
+                    </a>
+                    <p>Developing high-quality, secure mobile applications and trusted digital experiences.</p>
+                </div>
+
+                <!-- Column 2: Our Offices -->
+                <div>
+                    <div class="footer-title">Our Offices</div>
+                    <div class="offices-subgrid">
+                        <div class="office-item">
+                            <h5>Headquarters</h5>
+                            <p>[Office / Suite Address]<br>[City, Postal Code]<br>[Country]</p>
+                        </div>
+                        <div class="office-item">
+                            <h5>Global Support</h5>
+                            <p>[Regional Hub / Virtual Office]<br>[London / Tech Hub]<br>[Country]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Get in Touch -->
+                <div>
+                    <div class="footer-title">Get In Touch</div>
+                    <ul class="footer-links-list">
+                        <li><a href="mailto:[privacy-contact@yourdomain.com]">[privacy-contact@yourdomain.com]</a></li>
+                        <li><a href="#introduction">Privacy Policy</a></li>
+                        <li><a href="#account-deletion" style="color: var(--red-500); font-weight: 600;">Delete Your Account</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <div>&copy; 2026 [Your Company / Developer Name]. All rights reserved.</div>
+                <div class="footer-bottom-nav">
+                    <a href="#introduction">Privacy Policy</a>
+                    <a href="#account-deletion">Account Deletion</a>
+                    <a href="#contact">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Active Scrollspy for Table of Contents -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section.policy-section, div.key-points-box');
+            const navLinks = document.querySelectorAll('.toc-link');
+
+            window.addEventListener('scroll', () => {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 120;
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
